@@ -48,4 +48,80 @@ Dibujo 3 (el final): Muestra al Canibaba siendo encerrado en esta misma cueva po
 
 El Gran Descubrimiento: Javier se para frente a una piedra redonda en el centro. La piedra está rota y los dibujos de cierre están borrados o destruidos. El Canibaba Kilmo no es solo un cuento. Es algo que se escapó hace poco de su cárcel en estas ruinas bolivianas, y por eso sus amigos se perdieron. 
 
- 
+ 1. El Personaje Principal: Javier
+
+No hay duda: Javier es el personaje principal y el protagonista jugable.
+
+La historia se cuenta enteramente desde su perspectiva. El jugador comparte su confusión y su terror. Él es quien:
+
+Es testigo de la desaparición de sus amigos.
+
+Recibe la advertencia final de Carlos ("¡Nos va a... consumir!").
+
+Despierta solo y desorientado.
+
+Sufre los ataques mentales del Canibaba.
+
+Descubre las ruinas y la verdad sobre el encierro del monstruo.
+
+El objetivo de Javier (y del jugador) no es solo escapar, sino entender qué pasó y, posiblemente, cómo detener al Canibaba.
+
+2. Continuación de la Historia: El Sello Roto
+
+La historia termina justo cuando Javier hace "El Gran Descubrimiento": la piedra redonda (el sello) está rota y el Canibaba Kilmo ha escapado.
+
+Aquí es donde comienza el siguiente capítulo del juego:
+
+Javier ahora sabe la verdad. No puede simplemente huir de la selva, porque el Kilmo está libre y "consumirá" a más personas. Además, tiene la vaga esperanza de poder salvar a sus amigos.
+
+Su nuevo objetivo es claro: debe volver a encerrar al Canibaba.
+
+Para hacerlo, debe usar el conocimiento de los antiguos Movima. Las pinturas en la pared no eran solo una historia, eran un manual de instrucciones.
+
+Javier debe explorar más a fondo las ruinas y la selva circundante para encontrar las piezas faltantes del ritual de sellado. El Canibaba, consciente de que Javier ahora conoce su secreto, comenzará a cazarlo activamente, volviéndose más agresivo.
+
+3. Mecánicas de Juego (Aventura 2D)
+
+Así es como el guion se traduce en mecánicas de juego:
+
+Mecánica Central: "Claridad Mental" (La Barra de Cordura)
+
+En lugar de una barra de "vida", Javier tiene una barra de "Claridad Mental".
+
+El Canibaba Kilmo no ataca físicamente; ataca la mente.
+
+Cuando el Kilmo está cerca, los "susurros" aumentan y la barra de Claridad de Javier comienza a bajar.
+
+Si la barra se vacía, Javier "Olvida". Esto puede significar un "Game Over" (despertando de nuevo en el último punto de control, sin recordar cómo llegó allí) o una penalización (como olvidar un objeto clave que debe volver a encontrar).
+
+Mecánica de Exploración y Sigilo
+
+Plataformas 2D: El jugador debe guiar a Javier a través de la selva oscura y las ruinas traicioneras, saltando abismos, escalando lianas y evitando trampas naturales.
+
+La Linterna: Javier usa su linterna (como mencionó Carlos) para ver. Sin embargo, usar la linterna puede atraer la atención del Kilmo. El jugador debe decidir cuándo usarla y cuándo aventurarse en la oscuridad.
+
+Sigilo: Javier no puede luchar contra el Canibaba. Cuando la criatura (la "masa sin forma") aparece, Javier debe esconderse en las sombras, detrás de pilares o sumergirse en el agua para evitar ser visto.
+
+Mecánica de "Tormento" (Puzzles Psicológicos)
+
+Esto viene directamente del "Problema de Mente" del guion.
+
+Distorsiones Visuales: A medida que la Claridad Mental baja, el juego te miente.
+
+Una plataforma puede parecer sólida, pero al saltar, desaparece (era una ilusión).
+
+Javier ve a María a lo lejos, llamándolo. Si el jugador la sigue, es una trampa que lleva a un peligro.
+
+Aparecen enemigos (como el mono con los ojos de Carlos) que son distracciones para que el verdadero peligro (el Kilmo) se acerque.
+
+Puzzles de Memoria: Para avanzar, Javier debe resolver puzzles. Por ejemplo, ve un símbolo en una pared. El Kilmo ataca, y el símbolo se "borra" de la mente de Javier. El jugador debe encontrar la forma de "recordar" (quizás encontrando el símbolo de nuevo) para abrir la puerta.
+
+Mecánica de Progresión: El Ritual
+
+El objetivo final es reactivar el sello (la piedra redonda).
+
+Para hacerlo, Javier debe encontrar 3 o 4 "Glifos" o artefactos Movima perdidos en el escenario.
+
+Cada artefacto está protegido por un gran puzzle basado en las mecánicas de tormento y sigilo.
+
+Una vez que Javier reúne todos los artefactos, debe llevarlos a la piedra redonda para el "jefe final", que no es una pelea, sino un puzzle de sigilo y tiempo donde debe activar el sello mientras el Canibaba Kilmo lo caza desesperadamente en la cámara central.
