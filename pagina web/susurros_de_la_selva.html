@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susurros de la Selva: Canibaba</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+/* 1. THE SETUP */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a2a1a; /* Dark background for the page */
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr;
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px 0;
+  place-items: center;
+}
+
+.slide-container {
+  align-items: center;
+  background-color: #1a2a1a; /* Dark Jungle Green Background */
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  height: 720px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 60px;
+  position: relative;
+  width: 1280px;
+}
+
+/* 1.1 BACKGROUND STYLING */
+.slide-container::before {
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+  /* Faint abstract pattern */
+  background-image: radial-gradient(#f5f5f0 0.5px, transparent 0.5px);
+  background-size: 15px 15px;
+  opacity: 0.05;
+}
+
+.slide-container>* {
+  position: relative;
+  z-index: 1;
+}
+
+/* 2. CONSISTENT TYPOGRAPHY */
+
+/* Headings Font */
+.slide-container h1,
+.slide-container h2,
+.slide-container h3 {
+  color: #b9955d; /* Gold/Ochre Accent */
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+}
+
+/* Body Text Font */
+.slide-container p,
+.slide-container li,
+.slide-container .subtitle,
+.slide-container .number-label,
+.slide-container .legend li,
+.slide-container .chart-summary,
+.slide-container .bar .label,
+.slide-container th,
+.slide-container td,
+.slide-container .alternating-text-tile p,
+.slide-container .bleed-text-side p,
+.slide-container .quote-layout cite {
+  color: #f5f5f0; /* Off-white/Beige Text */
+  font-family: 'Lato', sans-serif;
+}
+
+/* Consistent Font Sizes */
+.slide-container h1 {
+  font-size: 70px;
+}
+
+.slide-container .slide-title {
+  /* This is an h2 */
+  font-size: 40px;
+  font-weight: 400;
+  margin-bottom: 40px;
+  text-align: left;
+  width: 100%;
+  color: #b9955d; /* Gold/Ochre Accent */
+}
+
+.slide-container h3 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+/* Unified body text size */
+.slide-container p,
+.slide-container li,
+.slide-container .subtitle,
+.slide-container .legend li,
+.slide-container .chart-summary,
+.slide-container .bar .label,
+.slide-container th,
+.slide-container td,
+.slide-container .alternating-text-tile p,
+.slide-container .bleed-text-side p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.slide-container .subtitle {
+  font-weight: 400;
+  margin: 20px auto;
+  color: #f5f5f0; /* Off-white/Beige Text */
+}
+
+.slide-container .content-area {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+}
+
+/* 3. LAYOUT DEFINITIONS */
+
+.title-layout {
+  text-align: center;
+}
+.title-layout h1 {
+  color: #f5f5f0; /* White title for full bg image */
+}
+.title-layout .subtitle {
+  color: #f5f5f0;
+  font-size: 24px;
+}
+
+
+.two-column {
+  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  width: 100%;
+}
+
+.two-column.tiled {
+  align-items: stretch;
+}
+
+.two-column.tiled>div {
+  background-color: #2a3a2a; /* Lighter dark green */
+  border-radius: 12px;
+  border: 1px solid #b9955d;
+  padding: 40px;
+  text-align: left;
+}
+
+.two-column.tiled h3 {
+  color: #b9955d;
+}
+
+.two-column ul {
+  list-style: disc;
+  margin: 0;
+  padding-left: 25px;
+}
+
+.two-column li {
+  margin-bottom: 15px;
+  color: #f5f5f0;
+}
+
+.image-wrapper {
+  border-radius: 12px;
+  height: 350px;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid #b9955d;
+  background-color: #2a3a2a;
+}
+
+.image-wrapper img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+
+/* Estilo para el marcador de posición de video */
+.video-placeholder {
+    display: grid;
+    place-items: center;
+    color: white;
+    font-size: 80px;
+    background-size: cover;
+    background-position: center;
+}
+
+.video-placeholder .fa-play {
+    text-shadow: 0 0 20px rgba(0,0,0,0.7);
+    z-index: 1;
+}
+
+/* Capa oscura para el video-placeholder */
+.video-placeholder::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    z-index: 0;
+}
+
+
+.tiled-content {
+  align-items: stretch;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  width: 100%;
+}
+
+.tile {
+  align-items: center;
+  background-color: #2a3a2a; /* Lighter dark green */
+  border-radius: 12px;
+  border: 1px solid #b9955d;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-start;
+  padding: 30px;
+  text-align: center;
+}
+
+.tile .icon {
+  color: #b9955d; /* Gold/Ochre Accent */
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.bullet-list {
+  max-width: 900px;
+  width: 100%;
+}
+
+.bullet-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bullet-list li {
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-left: 40px;
+  position: relative;
+  color: #f5f5f0;
+}
+
+.bullet-list i {
+  color: #b9955d; /* Gold/Ochre Accent */
+  font-size: 24px;
+  left: 0;
+  margin-top: 5px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+}
+
+.bullet-list li strong {
+  color: #f5f5f0;
+  font-weight: 700;
+}
+
+.image-tile {
+  flex: 1;
+  text-align: left;
+}
+
+.image-tile .image-wrapper {
+  height: 225px;
+  margin-bottom: 20px;
+  border: 1px solid #b9955d;
+}
+
+.image-tile p {
+    font-size: 16px;
+}
+
+.full-bg-image {
+  background-position: center;
+  background-size: cover;
+}
+
+.full-bg-image .content-overlay {
+  text-align: center;
+}
+
+.full-bg-image h1,
+.full-bg-image p {
+  color: #f5f5f0; /* White text on dark image */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+
+.highlight-numbers-layout>div:first-child {
+  flex: 0 0 40%;
+  text-align: center;
+}
+
+.highlight-numbers-layout .number {
+  color: #b9955d; /* Gold/Ochre Accent */
+  font-size: 150px;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1;
+}
+
+.highlight-numbers-layout .number-label {
+  font-size: 24px;
+  font-weight: 700;
+  color: #f5f5f0;
+}
+
+
+/* Section Title */
+.section-title-layout {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.section-title-layout h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+
+.section-title-layout p {
+  font-size: 22px;
+  margin: 0 auto;
+  max-width: 700px;
+  color: #f5f5f0;
+}
+
+.section-title-layout hr {
+  background-color: #b9955d; /* Gold/Ochre Accent */
+  border: none;
+  height: 5px;
+  margin: 30px auto;
+  width: 100px;
+}
+
+/* Quote Layout */
+.quote-layout {
+  text-align: center;
+  width: 80%;
+}
+
+.quote-layout blockquote {
+  color: #f5f5f0; /* Off-white/Beige Text */
+  font-size: 48px;
+  font-weight: 400;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.4;
+  margin: 0 0 30px 0;
+  padding: 0 40px;
+  position: relative;
+}
+
+.quote-layout blockquote::before,
+.quote-layout blockquote::after {
+  color: #b9955d; /* Gold/Ochre Accent */
+  opacity: 0.3;
+  content: '"';
+  font-size: 100px;
+  line-height: 0;
+  position: absolute;
+}
+
+.quote-layout blockquote::before {
+  left: -10px;
+  top: 30px;
+}
+
+.quote-layout blockquote::after {
+  bottom: 10px;
+  right: -10px;
+}
+
+.quote-layout cite {
+  color: #b9955d; /* Gold/Ochre Accent */
+  font-size: 22px;
+  font-style: normal;
+  font-family: 'Lato', sans-serif;
+}
+
+/* `Bleed_Image_Right` layout */
+.slide-container.bleed-image-layout {
+  align-items: start;
+  display: grid;
+  gap: 50px;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+}
+
+.slide-container.bleed-image-layout>.content-container {
+  padding: 60px 0 60px 60px;
+}
+
+.slide-container.bleed-image-layout>.image-container {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slide-container.bleed-image-layout img.bleed-image-side {
+  border-radius: 0 8px 8px 0;
+  height: 100%;
+  max-width: 100%;
+  max-height: 720px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.slide-container.bleed-image-layout .bleed-text-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.slide-container.bleed-image-layout .bleed-text-side p {
+  color: #f5f5f0;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+    </style>
+</head>
+<body>
+
+
+<div class="slide-container full-bg-image" id="slide1" style="background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/portada_selva.png');">
+    <div class="title-layout">
+        <h1>SUSURROS DE LA SELVA: CANIBABA</h1>
+        <p class="subtitle">Un guion de terror y misterio</p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide2">
+    <h2 class="slide-title">El Internamiento</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>El sol bajaba rápido...</h3>
+                <p>Javier y sus amigos, Carlos y María, se habían metido demasiado adentro en el monte.</p>
+                <p><strong>Maria:</strong> —Deberíamos volver, es la zona del pueblo Movima... escucha (susurró)... deberíamos irnos.</p>
+                <p><strong>Carlos:</strong> —Solo un poco más. Quiero encontrar esas viejas ruinas que dicen que existen.</p>
+            </div>
+            <div>
+               
+                <div class="image-wrapper"><img src="img/atardecer_selva.png" alt="Atardecer sobre la selva"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide3">
+    <h2 class="slide-title">El Grito</h2>
+    <div class="content-area">
+        <div class="two-column highlight-numbers-layout">
+            <div>
+                <div class="number">¡GRITO!</div>
+                <div class="number-label">Un grito feo y fuerte</div>
+            </div>
+            <div>
+                
+                <div class="image-wrapper" style="background-color: #1a2a1a;"> 
+                    <video controls style="width: 100%; height: 100%; border-radius: 12px; object-fit: cover;">
+                        
+                        
+                        <source src="img/canibaba_video.mp4" type="video/mp4">
+                        
+                        Tu navegador no soporta el tag de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container bleed-image-layout" id="slide5">
+    <div class="content-container">
+        <h2 class="slide-title">El Canibaba Kilmo</h2>
+        <div class="content-area">
+            <div class="bleed-text-side">
+                <h3>Lejos, en la sombra, Javier solo pudo ver una figura...</h3>
+                <p>...una masa sin forma y enredada, como un árbol muerto que se movía.</p>
+                <p>Era el <strong>Canibaba Kilmo</strong>, el que se "come" cosas.</p>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        
+        <img
+            class="bleed-image-side"
+            src="img/canibaba_figura.png"
+            alt="Una figura abstracta y sombría hecha de enredaderas en la selva">
+    </div>
+</div>
+
+<div class="slide-container" id="slide6">
+    <h2 class="slide-title">La Huida</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3>El Regreso de Carlos</h3>
+                <p>Carlos regresó corriendo, sin aire y con los ojos muy abiertos. Empujó a Javier con mucha fuerza:</p>
+                <p><strong>—¡Huye! ¡Nos va a... consumir!</strong></p>
+            </div>
+            <div>
+                
+                <div class="image-wrapper"><img src="img/ruinas_ocultas.png" alt="Ruinas antiguas de piedra y barro cubiertas de enredaderas en una cueva"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide10">
+    <h2 class="slide-title">La Historia en las Paredes (Parte 1)</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="image-tile">
+              
+                <div class="image-wrapper"><img src="img/dibujo_kilmo.png" alt="Pintura rupestre de una sombra consumiendo palabras"></div>
+                <p><strong>Dibujo 1:</strong> Muestra a una figura oscura (el Kilmo) comiendo palabras y dibujos.</p>
+            </div>
+            <div class="image-tile">
+                
+                <div class="image-wrapper"><img src="img/dibujo_ritual.png" alt="Pintura rupestre de un pueblo indígena en un ritual"></div>
+                <p><strong>Dibujo 2:</strong> Muestra a un antiguo pueblo Movima haciendo un gran ritual.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide11">
+    <h2 class="slide-title">La Historia en las Paredes (Parte 2)</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="image-tile">
+                
+                <div class="image-wrapper"><img src="img/dibujo_encierro.png" alt="Pintura rupestre de un monstruo siendo encerrado en una cueva"></div>
+                <p><strong>Dibujo 3:</strong> Muestra al Canibaba siendo encerrado en esta misma cueva por la gente sabia del pueblo.</p>
+            </div>
+            <div class="image-tile">
+                
+                <div class="image-wrapper"><img src="img/piedra_rota.png" alt="Una piedra circular rota con símbolos en unas ruinas"></div>
+                <p><strong>El Descubrimiento:</strong> Javier se para frente a una piedra redonda rota. Los dibujos de cierre están borrados.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide12">
+    <h2 class="slide-title">El Gran Descubrimiento</h2>
+    <div class="content-area">
+        <div class="quote-layout">
+            <blockquote>El Canibaba Kilmo no es solo un cuento. Es algo que se escapó hace poco de su cárcel en estas ruinas bolivianas, y por eso sus amigos se perdieron.</blockquote>
+            <cite>— Continuará...</cite>
+        </div>
+    </div>
+</div>
+<div class="slide-container bleed-image-layout" id="slide13">
+    <div class="content-container">
+        <h2 class="slide-title">El Protagonista: Javier</h2>
+        <div class="content-area">
+            <div class="bleed-text-side">
+                <h3>El jugador comparte su confusión y su terror.</h3>
+                <ul>
+                    <li>Es testigo de la desaparición de sus amigos.</li>
+                    <li>Recibe la advertencia final de Carlos.</li>
+                    <li>Sufre los ataques mentales del Canibaba.</li>
+                    <li>Descubre la verdad sobre el encierro del monstruo.</li>
+                </ul>
+                <p><strong>Su objetivo:</strong> No solo escapar, sino entender qué pasó y cómo detener al Canibaba.</p>
+            </div>
+        </div>
+    </div>
+    <div class="image-container">
+        
+        <img
+            class="bleed-image-side"
+            src="img/protagonista_javier.png"
+            alt="Perfil de Javier, asustado pero decidido, iluminado por una linterna">
+    </div>
+</div>
+
+<div class="slide-container" id="slide14">
+    <div class="section-title-layout">
+        <hr>
+        <h2>El Siguiente Capítulo: El Sello Roto</h2>
+        <p>Javier ahora sabe la verdad. No puede huir. Su nuevo objetivo es claro: <strong>debe volver a encerrar al Canibaba.</strong></p>
+        <p>Debe usar el conocimiento de los antiguos Movima. Las pinturas en la pared no eran solo una historia, eran un <strong>manual de instrucciones.</strong></p>
+    </div>
+</div>
+
+<div class="slide-container" id="slide15">
+    <h2 class="slide-title">Mecánicas de Juego: Aventura 2D</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>Terror Psicológico y Puzzles</h3>
+                <p>Similar en atmósfera a juegos como *Limbo* o *Inside*, pero con un fuerte enfoque en la narrativa y la mitología boliviana.</p>
+                <p>El jugador debe guiar a Javier a través de la selva oscura y las ruinas traicioneras, saltando abismos, escalando lianas y evitando trampas.</p>
+            </div>
+            <div>
+                 
+                <div class="image-wrapper"><img src="img/mecanica_aventura_2d.png" alt="Silueta de Javier en un entorno de selva 2D oscuro"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide16">
+    <h2 class="slide-title">Mecánica Central: Claridad Mental</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                 
+                <div class="image-wrapper"><img src="img/mecanica_claridad.png" alt="Icono de un cerebro fragmentándose, representando la barra de cordura"></div>
+            </div>
+            <div>
+                <h3>No es una barra de "vida", es una barra de "Cordura".</h3>
+                <p>El Canibaba Kilmo no ataca físicamente; ataca la mente.</p>
+                <ul>
+                    <li>Cuando el Kilmo está cerca, los susurros aumentan y la barra baja.</li>
+                    <li>Si la barra se vacía, Javier "Olvida".</li>
+                    <li>Esto puede significar un "Game Over" o una penalización, como olvidar un objeto clave.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide17">
+    <h2 class="slide-title">Mecánica: Exploración y Sigilo</h2>
+    <div class="content-area">
+        <div class="bullet-list">
+             <h3>Javier no puede luchar contra el Canibaba. Debe esconderse.</h3>
+            <ul>
+                <li><i class="fa-solid fa-lightbulb"></i><strong>La Linterna:</strong> Esencial para ver, pero su luz atrae la atención del Kilmo. El jugador debe decidir cuándo usarla.</li>
+                <li><i class="fa-solid fa-eye-slash"></i><strong>Sigilo:</strong> Cuando la criatura aparece, Javier debe esconderse en las sombras, detrás de pilares o sumergirse en el agua para evitar ser visto.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="slide-container" id="slide18">
+    <h2 class="slide-title">Mecánica: Tormento y Puzzles Psicológicos</h2>
+    <div class="content-area">
+        <div class="two-column tiled">
+            <div>
+                <h3><i class="fa-solid fa-eye"></i> Distorsiones Visuales</h3>
+                <p>A medida que la Claridad Mental baja, el juego te miente.</p>
+                <ul>
+                    <li>Una plataforma puede parecer sólida, pero ser una ilusión.</li>
+                    <li>Javier ve a María a lo lejos, pero si la sigue, es una trampa.</li>
+                </ul>
+            </div>
+            <div>
+                <h3><i class="fa-solid fa-brain"></i> Puzzles de Memoria</h3>
+                <p>El Kilmo "borra" cosas de la mente de Javier.</p>
+                <ul>
+                    <li>Javier ve un símbolo en una pared. El Kilmo ataca, y el símbolo se "borra".</li>
+                    <li>El jugador debe encontrar la forma de "recordar" para abrir la puerta.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="slide-container" id="slide19">
+    <h2 class="slide-title">Mecánica de Progresión: El Ritual</h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <h3>El objetivo final es reactivar el sello.</h3>
+                <p>Para hacerlo, Javier debe encontrar <strong>3 o 4 "Glifos" o artefactos Movima</strong> perdidos en el escenario.</p>
+                <p>El "jefe final" no es una pelea, sino un <strong>puzzle de sigilo y tiempo</strong> donde debe activar el sello mientras el Canibaba Kilmo lo caza desesperadamente.</p>
+            </div>
+            <div>
+                
+                <div class="image-wrapper"><img src="img/mecanica_ritual.png" alt="Los 4 glifos Movima brillando sobre la piedra del sello"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
+
