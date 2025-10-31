@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":2.2446,
+  "duration":2.2465305,
   "exportDir":"",
   "name":"sn_ghost1",
   "parent":{

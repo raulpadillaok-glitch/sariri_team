@@ -1,6 +1,6 @@
 active_distance = 160;
 spd = 8;
-damage = 20;
+damage = 50;
 targetx = x;
 targety = y;
 charge = false;

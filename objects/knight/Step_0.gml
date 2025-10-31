@@ -7,6 +7,12 @@ if(instance_exists(decoy))
 	{
 		image_alpha = 1;
 		image_blend = c_white;
+		  if (chase_timer <= 0) {
+            chase_timer = chase_duration; // Comienza a contar 2 segundos
+        }
+        
+        // SOLO PERSIGUE SI EL TEMPORIZADOR NO HA LLEGADO A CERO
+        if (chase_timer > 0)
 	
 		targetx = decoy.x;
 		targety = decoy.y;

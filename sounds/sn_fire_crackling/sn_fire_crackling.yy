@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":27.3267,
+  "duration":27.350204,
   "exportDir":"",
   "name":"sn_fire_crackling",
   "parent":{

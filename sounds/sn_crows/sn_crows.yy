@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":5.5332,
+  "duration":5.537959,
   "exportDir":"",
   "name":"sn_crows",
   "parent":{

@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":1.566,
+  "duration":1.5673469,
   "exportDir":"",
   "name":"sn_gears",
   "parent":{

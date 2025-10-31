@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.8874,
+  "duration":0.88816327,
   "exportDir":"",
   "name":"sn_hey2",
   "parent":{

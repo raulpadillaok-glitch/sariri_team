@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":6.6033,
+  "duration":6.6089797,
   "exportDir":"",
   "name":"sn_wolf1",
   "parent":{

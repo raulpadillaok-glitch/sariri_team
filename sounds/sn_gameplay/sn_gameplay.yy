@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":76.3686,
+  "duration":76.43429,
   "exportDir":"",
   "name":"sn_gameplay",
   "parent":{

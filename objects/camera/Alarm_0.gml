@@ -1,5 +1,5 @@
 follow_path = true;
-path_start(Cam_path, 10, path_action_stop, true);
+path_start(Cam_path, 500, path_action_stop, true);
 sound_manager.end_sound = true;
 precise = true;
 
