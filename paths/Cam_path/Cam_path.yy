@@ -1,0 +1,27 @@
+{
+  "$GMPath":"",
+  "%Name":"Cam_path",
+  "closed":false,
+  "kind":0,
+  "name":"Cam_path",
+  "parent":{
+    "name":"Paths",
+    "path":"folders/Paths.yy",
+  },
+  "points":[
+    {"speed":100.0,"x":8440.0,"y":4470.0,},
+    {"speed":100.0,"x":8440.0,"y":5000.0,},
+    {"speed":100.0,"x":900.0,"y":5000.0,},
+    {"speed":100.0,"x":900.0,"y":3600.0,},
+    {"speed":100.0,"x":1550.0,"y":3600.0,},
+    {"speed":100.0,"x":1550.0,"y":2450.0,},
+    {"speed":100.0,"x":7100.0,"y":2450.0,},
+    {"speed":100.0,"x":7100.0,"y":1950.0,},
+    {"speed":100.0,"x":8900.0,"y":1950.0,},
+    {"speed":100.0,"x":8900.0,"y":540.0,},
+    {"speed":100.0,"x":960.0,"y":540.0,},
+  ],
+  "precision":2,
+  "resourceType":"GMPath",
+  "resourceVersion":"2.0",
+}
